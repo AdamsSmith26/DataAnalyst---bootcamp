@@ -45,15 +45,61 @@ import pandas as pd
 # print(product_categories)
 # print(product_categories.name)
 
-prices_per_category = {
-    "A": 100,
-    "B": 200,
-    "C": 300
-}
+# prices_per_category = {
+#     "A": 100,
+#     "B": 200,
+#     "C": 300
+# }
 
 # print(type(prices_per_category)) #dict
 
-prices_per_category = pd.Series(prices_per_category)
+# prices_per_category = pd.Series(prices_per_category)
 # print(type(prices_per_category))
 # print(prices_per_category.index)
-print(type(prices_per_category.index))
+# print(type(prices_per_category.index))
+
+
+# serias_a = pd.Series([10, 20, 30, 40, 50])
+# print(list(serias_a.index))
+# prices_per_category = pd.Series({"A": 100, "B": 101, "C":102})
+# print(prices_per_category[0])
+
+# series_b = pd.Series([10, 20, 30, 40, 50], index=[1, 2, 3, 4, 5])
+# print(series_b[0]) #key_error
+# series_c = pd.Series([10, 20, 30, 40, 50], index=['1', '2', '3', '4', '5'])
+# print(series_c[3])
+
+# start_date_depozits = pd.Series({
+#     "7/4/2014" : 2000,
+#     "8/4/2014" : 1000,
+#     "9/4/2014" : 2000,
+#     "1/4/2014" : 4000,
+#     "2/4/2014" : 2500,
+#     "3/4/2014" : 2000,
+#     "4/4/2014" : 2300,
+#     "5/4/2014" : 3000,
+#     "6/4/2014" : 2800,
+#     "7/1/2014" : 1500,
+#     "7/2/2014" : 1000,
+#     "7/3/2014" : 2000,
+# })
+
+# print(start_date_depozits)
+
+# print(start_date_depozits.sum) #return nothing
+
+# print(start_date_depozits.sum())
+# print(start_date_depozits.min())
+# print(start_date_depozits.max())
+# print(start_date_depozits.idxmin()) #idx=index
+# print(start_date_depozits.idxmax())
+
+
+# print(start_date_depozits.head(3)) #first n elements  default = 5
+# print(start_date_depozits.tail(3)) #last n elements
+
+
+data = {"productName": ["Product A", "Product B", "Product C"], "productPrice": [200, 100, 300]}
+# df = pd.DataFrame(data)
+df = pd.DataFrame(data, index=["A", "B", "C"])
+print(df)
